@@ -1,3 +1,3 @@
 # infinity-scroll
-Link to the site:
+Link to the demo:
 https://mxassanov.github.io/infinity-scroll/
