@@ -13,12 +13,12 @@ const apiKey = 'U29Fq-xjUJg2aO9vKCRaG8webPhl6gWgiPUm2N5IkGg'
 const query = 'architecture'
 let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${initialCount}&query=${query}`
 
-//обновляем url для API
+// обновляем URL для API
 function updateAPIUrlWithNewCount(picCount) {
   apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${picCount}&query=${query}`
 }
 
-//проверяет для каждого фото загрузилось ли оно
+// Проверяет для каждого фото загрузилось ли оно
 function imageLoaded() {
   imagesLoaded++
   if (imagesLoaded === totalImages) {
@@ -27,14 +27,14 @@ function imageLoaded() {
   }
 }
 
-//вспомогательная функция для установки атрибутов в элементы DOM
+// Вспомогательная функция для установки атрибутов в элементы DOM
 function setAttributes(elem, attributes) {
   for (let key in attributes) {
     elem.setAttribute(key, attributes[key])
   }
 }
 
-//Создание элементов для ссылок и фото, и добавление в DOM
+// Создание элементов для ссылок и фото, и добавление в DOM
 function displayPhotos() {
   imagesLoaded = 0
   totalImages = photosArray.length
